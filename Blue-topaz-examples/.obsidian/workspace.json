@@ -57,8 +57,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java/入门/注释.md",
-                "mode": "preview",
+                "file": "Java/入门/标识符&关键字.md",
+                "mode": "source",
                 "backlinks": false,
                 "source": false
               }
@@ -164,7 +164,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java/入门/注释.md"
+                "file": "Java/入门/标识符&关键字.md"
               }
             }
           },
@@ -195,7 +195,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java/入门/注释.md",
+                "file": "Java/入门/标识符&关键字.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "byModifiedTime",
@@ -212,7 +212,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java/入门/注释.md",
+                "file": "Java/入门/标识符&关键字.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -275,8 +275,8 @@
   },
   "active": "f770470910ede581",
   "lastOpenFiles": [
-    "Java/入门/标识符&关键字.md",
     "Java/入门/注释.md",
+    "Java/入门/标识符&关键字.md",
     "99-Attachment/99-Attachment.md",
     "60-Canvas/60-Canvas.md",
     "10-Help/10-Help.md",
