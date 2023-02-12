@@ -1,6 +1,26 @@
 {
   "recentFiles": [
     {
+      "basename": "10-Help",
+      "path": "10-Help/10-Help.md"
+    },
+    {
+      "basename": "00-Tips",
+      "path": "00-Tips/00-Tips.md"
+    },
+    {
+      "basename": "Demo Note",
+      "path": "Demo Note.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "Home_middle",
+      "path": "60-Canvas/Home_middle.canvas"
+    },
+    {
       "basename": "88-Template",
       "path": "88-Template/88-Template.md"
     },
@@ -11,10 +31,6 @@
     {
       "basename": "60-Canvas",
       "path": "60-Canvas/60-Canvas.md"
-    },
-    {
-      "basename": "Home_middle",
-      "path": "60-Canvas/Home_middle.canvas"
     },
     {
       "basename": "Changlog",
@@ -183,22 +199,6 @@
     {
       "basename": "}FP`%@6]P61LO)Y$`C11HBP",
       "path": "99-Attachment/}FP`%@6]P61LO)Y$`C11HBP.png"
-    },
-    {
-      "basename": "99-Attachment",
-      "path": "99-Attachment/99-Attachment.md"
-    },
-    {
-      "basename": "TIPS",
-      "path": "60-Canvas/TIPS.canvas"
-    },
-    {
-      "basename": "Formatting_Cheatsheet",
-      "path": "60-Canvas/Formatting_Cheatsheet.canvas"
-    },
-    {
-      "basename": "主题截图分享",
-      "path": "主题截图分享.md"
     }
   ],
   "omittedPaths": [],

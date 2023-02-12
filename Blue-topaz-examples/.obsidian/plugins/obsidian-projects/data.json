@@ -1,104 +1,182 @@
 {
+  "version": 2,
   "projects": [
     {
-      "id": "452d8da3-6b6b-4c47-805f-4d9c0448647f",
-      "name": "Reading",
-      "path": "30-Reading",
-      "recursive": false,
+      "fieldConfig": {},
       "defaultName": "",
       "templates": [],
+      "excludedNotes": [],
+      "isDefault": false,
+      "dataSource": {
+        "kind": "folder",
+        "config": {
+          "path": "30-Reading",
+          "recursive": false
+        }
+      },
+      "newNotesFolder": "",
       "views": [
         {
-          "id": "c9df6f2d-41a6-4bf2-9424-f6566c8c0581",
-          "name": "Board",
-          "type": "board",
           "config": {
             "groupByField": "tags",
             "priorityField": ""
-          }
+          },
+          "filter": {
+            "conditions": []
+          },
+          "colors": {
+            "conditions": []
+          },
+          "id": "c9df6f2d-41a6-4bf2-9424-f6566c8c0581",
+          "name": "Board",
+          "type": "board"
         },
         {
-          "id": "c57be598-7568-4930-be1d-11a3696b1a4b",
-          "name": "Table",
-          "type": "table",
           "config": {
             "fieldConfig": {
               "name": {
                 "width": 193
               }
             }
-          }
+          },
+          "filter": {
+            "conditions": []
+          },
+          "colors": {
+            "conditions": []
+          },
+          "id": "c57be598-7568-4930-be1d-11a3696b1a4b",
+          "name": "Table",
+          "type": "table"
         },
         {
-          "id": "585d39fd-f88b-4249-bd78-0874094f140d",
-          "name": "Calendar",
-          "type": "calendar",
           "config": {
             "dateField": "viewtime",
             "interval": "month",
             "checkField": "进度"
-          }
+          },
+          "filter": {
+            "conditions": []
+          },
+          "colors": {
+            "conditions": []
+          },
+          "id": "585d39fd-f88b-4249-bd78-0874094f140d",
+          "name": "Calendar",
+          "type": "calendar"
         }
       ],
-      "dataview": false
+      "name": "Reading",
+      "id": "452d8da3-6b6b-4c47-805f-4d9c0448647f"
     },
     {
-      "id": "a6202afb-e904-4cbb-a090-1a40b5a5ec50",
-      "name": "30-Reading",
-      "path": "30-Reading",
-      "recursive": true,
+      "fieldConfig": {},
       "defaultName": "",
       "templates": [],
+      "excludedNotes": [],
+      "isDefault": false,
+      "dataSource": {
+        "kind": "folder",
+        "config": {
+          "path": "30-Reading",
+          "recursive": true
+        }
+      },
+      "newNotesFolder": "",
       "views": [
         {
+          "config": {},
+          "filter": {
+            "conditions": []
+          },
+          "colors": {
+            "conditions": []
+          },
           "id": "74ef48a1-4b1a-4a70-a59f-4dd4aa371e75",
           "name": "Table",
-          "type": "table",
-          "config": {}
+          "type": "table"
         },
         {
+          "config": {},
+          "filter": {
+            "conditions": []
+          },
+          "colors": {
+            "conditions": []
+          },
           "id": "8135d89f-7848-4b7a-a525-2005b99eaccf",
           "name": "Board",
-          "type": "board",
-          "config": {}
+          "type": "board"
         },
         {
+          "config": {},
+          "filter": {
+            "conditions": []
+          },
+          "colors": {
+            "conditions": []
+          },
           "id": "38b4b14e-b813-446a-8dc2-f5e8f37508a8",
           "name": "Calendar",
-          "type": "calendar",
-          "config": {}
+          "type": "calendar"
         }
-      ]
+      ],
+      "name": "30-Reading",
+      "id": "a6202afb-e904-4cbb-a090-1a40b5a5ec50"
     },
     {
-      "id": "9fedc95d-29ff-4baa-98b9-3a25810a0f5b",
-      "name": "tips",
-      "path": "",
-      "recursive": false,
+      "fieldConfig": {},
       "defaultName": "",
       "templates": [],
+      "excludedNotes": [],
+      "isDefault": false,
+      "dataSource": {
+        "kind": "dataview",
+        "config": {
+          "query": "TABLE\ntags,author,readtime,pagecount\nfrom #book"
+        }
+      },
+      "newNotesFolder": "",
       "views": [],
-      "dataview": true,
-      "query": "TABLE\ntags,author,readtime,pagecount\nfrom #book"
+      "name": "tips",
+      "id": "9fedc95d-29ff-4baa-98b9-3a25810a0f5b"
     },
     {
-      "id": "78fa420e-ac24-4e1d-91f4-a3dcfb314e64",
-      "name": "test",
-      "path": "test",
-      "recursive": false,
+      "fieldConfig": {},
       "defaultName": "",
       "templates": [],
+      "excludedNotes": [],
+      "isDefault": false,
+      "dataSource": {
+        "kind": "folder",
+        "config": {
+          "path": "test",
+          "recursive": false
+        }
+      },
+      "newNotesFolder": "",
       "views": [
         {
+          "config": {},
+          "filter": {
+            "conditions": []
+          },
+          "colors": {
+            "conditions": []
+          },
           "id": "e7bb2340-c802-4558-9423-b5d94fdfe77f",
           "name": "Table",
-          "type": "table",
-          "config": {}
+          "type": "table"
         }
-      ]
+      ],
+      "name": "test",
+      "id": "78fa420e-ac24-4e1d-91f4-a3dcfb314e64"
     }
   ],
-  "version": 1,
-  "lastProjectId": "452d8da3-6b6b-4c47-805f-4d9c0448647f",
-  "lastViewId": "c57be598-7568-4930-be1d-11a3696b1a4b"
+  "preferences": {
+    "projectSizeLimit": 1000,
+    "frontmatter": {
+      "quoteStrings": "PLAIN"
+    }
+  }
 }

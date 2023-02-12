@@ -26,15 +26,25 @@
             }
           },
           {
-            "id": "de04b2d2a204ec67",
+            "id": "dd676dda409cfe78",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "88-Template/88-Template.md",
+                "file": "10-Help/10-Help.md",
                 "mode": "preview",
                 "backlinks": false,
                 "source": false
+              }
+            }
+          },
+          {
+            "id": "a51bc59dfce8a611",
+            "type": "leaf",
+            "state": {
+              "type": "surfing-view",
+              "state": {
+                "url": "https://github.com/Rainbell129/Obsidian-Homepage"
               }
             }
           }
@@ -113,8 +123,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 276.9945435523987,
-    "collapsed": true
+    "width": 276.9945435523987
   },
   "right": {
     "id": "4e390742ffc29613",
@@ -139,7 +148,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "88-Template/88-Template.md"
+                "file": "10-Help/10-Help.md"
               }
             }
           },
@@ -170,7 +179,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "88-Template/88-Template.md",
+                "file": "10-Help/10-Help.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "byModifiedTime",
@@ -187,7 +196,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "88-Template/88-Template.md",
+                "file": "10-Help/10-Help.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -224,8 +233,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 265,
-    "collapsed": true
+    "width": 265
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -249,17 +257,17 @@
       "obsidian-memos:Memos": false
     }
   },
-  "active": "de04b2d2a204ec67",
+  "active": "dd676dda409cfe78",
   "lastOpenFiles": [
+    "00-Tips/00-Tips.md",
+    "Demo Note.md",
+    "README.md",
+    "10-Help/10-Help.md",
+    "60-Canvas/Home_middle.canvas",
+    "88-Template/88-Template.md",
     "50-Inbox/50-Inbox.md",
     "60-Canvas/60-Canvas.md",
-    "60-Canvas/Home_middle.canvas",
     "60-Canvas/canvas白板介绍_middle.canvas",
-    "Changlog.md",
-    "20230104165032.md",
-    "88-Template/彩色时钟.md",
-    "77-Example/◾ Dataview相关实例/电影看板.md",
-    "77-Example/◾ Dataview相关实例/带进度条的任务列表.md",
-    "60-Canvas/Assets/1505323928_home_.png"
+    "Changlog.md"
   ]
 }
