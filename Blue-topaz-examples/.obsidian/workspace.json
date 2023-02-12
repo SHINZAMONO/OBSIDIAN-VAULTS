@@ -57,7 +57,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java/入门/标识符&关键字.md",
+                "file": "Java/入门/数据类型.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -164,7 +164,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java/入门/标识符&关键字.md"
+                "file": "Java/入门/数据类型.md"
               }
             }
           },
@@ -195,7 +195,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java/入门/标识符&关键字.md",
+                "file": "Java/入门/数据类型.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "byModifiedTime",
@@ -212,7 +212,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java/入门/标识符&关键字.md",
+                "file": "Java/入门/数据类型.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -275,6 +275,7 @@
   },
   "active": "f770470910ede581",
   "lastOpenFiles": [
+    "Java/入门/标识符&关键字.md",
     "Java/入门/数据类型.md",
     "00-Tips/插件介绍/插件介绍.md",
     "00-Tips/魔方配色设置说明.md",
@@ -283,7 +284,6 @@
     "README.md",
     "Changlog.md",
     "Demo Note.md",
-    "Java/入门/标识符&关键字.md",
     "Java/入门/注释.md"
   ]
 }
