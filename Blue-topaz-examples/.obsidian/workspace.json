@@ -70,7 +70,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java/入门/数据类型.md",
+                "file": "Java/入门/标识符&关键字.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -177,7 +177,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java/入门/数据类型.md"
+                "file": "Java/入门/标识符&关键字.md"
               }
             }
           },
@@ -208,7 +208,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java/入门/数据类型.md",
+                "file": "Java/入门/标识符&关键字.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "byModifiedTime",
@@ -225,7 +225,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java/入门/数据类型.md",
+                "file": "Java/入门/标识符&关键字.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -286,8 +286,9 @@
       "obsidian-memos:Memos": false
     }
   },
-  "active": "712f55eecdfe2d24",
+  "active": "37c8f55a8ef7a09c",
   "lastOpenFiles": [
+    "Java/入门/数据类型.md",
     "Java/入门/标识符&关键字.md",
     "Java/入门/注释.md",
     "99-Attachment/99-Attachment.md",
@@ -296,7 +297,6 @@
     "00-Tips/00-Tips.md",
     "60-Canvas/Home_middle.canvas",
     "99-Attachment/banner/v2-4b004937cb577df39e424172ee476d1b_r.jpg",
-    "88-Template/88-Template.md",
-    "Demo Note.md"
+    "88-Template/88-Template.md"
   ]
 }
