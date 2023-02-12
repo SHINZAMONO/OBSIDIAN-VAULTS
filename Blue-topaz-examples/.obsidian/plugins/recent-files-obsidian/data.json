@@ -5,12 +5,16 @@
       "path": "Java/入门/数据类型.md"
     },
     {
-      "basename": "Demo Note",
-      "path": "Demo Note.md"
-    },
-    {
       "basename": "标识符&关键字",
       "path": "Java/入门/标识符&关键字.md"
+    },
+    {
+      "basename": "注释",
+      "path": "Java/入门/注释.md"
+    },
+    {
+      "basename": "Demo Note",
+      "path": "Demo Note.md"
     },
     {
       "basename": "99-Attachment",
@@ -51,10 +55,6 @@
     {
       "basename": "Changlog",
       "path": "Changlog.md"
-    },
-    {
-      "basename": "注释",
-      "path": "Java/入门/注释.md"
     },
     {
       "basename": "v2-4b004937cb577df39e424172ee476d1b_r",
