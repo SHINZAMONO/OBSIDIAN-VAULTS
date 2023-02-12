@@ -9,6 +9,34 @@
       "path": "Java/入门/数据类型.md"
     },
     {
+      "basename": "插件介绍",
+      "path": "00-Tips/插件介绍/插件介绍.md"
+    },
+    {
+      "basename": "魔方配色设置说明",
+      "path": "00-Tips/魔方配色设置说明.md"
+    },
+    {
+      "basename": "配色分享monokai pro 配色",
+      "path": "00-Tips/配色分享monokai pro 配色.md"
+    },
+    {
+      "basename": "00-Tips",
+      "path": "00-Tips/00-Tips.md"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "Changlog",
+      "path": "Changlog.md"
+    },
+    {
+      "basename": "Demo Note",
+      "path": "Demo Note.md"
+    },
+    {
       "basename": "注释",
       "path": "Java/入门/注释.md"
     },
@@ -25,10 +53,6 @@
       "path": "10-Help/10-Help.md"
     },
     {
-      "basename": "00-Tips",
-      "path": "00-Tips/00-Tips.md"
-    },
-    {
       "basename": "Home_middle",
       "path": "60-Canvas/Home_middle.canvas"
     },
@@ -41,20 +65,8 @@
       "path": "88-Template/88-Template.md"
     },
     {
-      "basename": "Demo Note",
-      "path": "Demo Note.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
-    },
-    {
       "basename": "50-Inbox",
       "path": "50-Inbox/50-Inbox.md"
-    },
-    {
-      "basename": "Changlog",
-      "path": "Changlog.md"
     },
     {
       "basename": "canvas白板介绍_middle",
@@ -187,18 +199,6 @@
     {
       "basename": "View+",
       "path": "88-Template/EnablepluginList/View+.md"
-    },
-    {
-      "basename": "EnablepluginList",
-      "path": "88-Template/EnablepluginList/EnablepluginList.md"
-    },
-    {
-      "basename": "Required+",
-      "path": "88-Template/EnablepluginList/Required+.md"
-    },
-    {
-      "basename": "常用工具",
-      "path": "88-Template/常用工具.md"
     }
   ],
   "omittedPaths": [],
