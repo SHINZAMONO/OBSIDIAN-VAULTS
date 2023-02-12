@@ -1,12 +1,40 @@
 {
   "recentFiles": [
     {
+      "basename": "注释",
+      "path": "Java/入门/注释.md"
+    },
+    {
+      "basename": "标识符&关键字",
+      "path": "Java/入门/标识符&关键字.md"
+    },
+    {
+      "basename": "99-Attachment",
+      "path": "99-Attachment/99-Attachment.md"
+    },
+    {
+      "basename": "60-Canvas",
+      "path": "60-Canvas/60-Canvas.md"
+    },
+    {
       "basename": "10-Help",
       "path": "10-Help/10-Help.md"
     },
     {
       "basename": "00-Tips",
       "path": "00-Tips/00-Tips.md"
+    },
+    {
+      "basename": "Home_middle",
+      "path": "60-Canvas/Home_middle.canvas"
+    },
+    {
+      "basename": "v2-4b004937cb577df39e424172ee476d1b_r",
+      "path": "99-Attachment/banner/v2-4b004937cb577df39e424172ee476d1b_r.jpg"
+    },
+    {
+      "basename": "88-Template",
+      "path": "88-Template/88-Template.md"
     },
     {
       "basename": "Demo Note",
@@ -17,20 +45,8 @@
       "path": "README.md"
     },
     {
-      "basename": "Home_middle",
-      "path": "60-Canvas/Home_middle.canvas"
-    },
-    {
-      "basename": "88-Template",
-      "path": "88-Template/88-Template.md"
-    },
-    {
       "basename": "50-Inbox",
       "path": "50-Inbox/50-Inbox.md"
-    },
-    {
-      "basename": "60-Canvas",
-      "path": "60-Canvas/60-Canvas.md"
     },
     {
       "basename": "Changlog",
@@ -183,22 +199,6 @@
     {
       "basename": "示例库结构一览",
       "path": "60-Canvas/示例库结构一览.canvas"
-    },
-    {
-      "basename": "任务看板",
-      "path": "20-Diary/任务看板.md"
-    },
-    {
-      "basename": "通过下拉框检索文件示例",
-      "path": "77-Example/◾ Dataview相关实例/通过下拉框检索文件示例.md"
-    },
-    {
-      "basename": "6X%6SQ(MQO9OWWRJRPQSO3B",
-      "path": "99-Attachment/6X%6SQ(MQO9OWWRJRPQSO3B.png"
-    },
-    {
-      "basename": "}FP`%@6]P61LO)Y$`C11HBP",
-      "path": "99-Attachment/}FP`%@6]P61LO)Y$`C11HBP.png"
     }
   ],
   "omittedPaths": [],
