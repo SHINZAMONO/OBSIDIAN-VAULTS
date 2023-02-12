@@ -31,8 +31,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java/入门/标识符&关键字.md",
-                "mode": "preview",
+                "file": "Java/入门/数据类型.md",
+                "mode": "source",
                 "backlinks": false,
                 "source": false
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java/入门/标识符&关键字.md"
+                "file": "Java/入门/数据类型.md"
               }
             }
           },
@@ -169,7 +169,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java/入门/标识符&关键字.md",
+                "file": "Java/入门/数据类型.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "byModifiedTime",
@@ -186,7 +186,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java/入门/标识符&关键字.md",
+                "file": "Java/入门/数据类型.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -249,15 +249,15 @@
   },
   "active": "37c8f55a8ef7a09c",
   "lastOpenFiles": [
+    "Demo Note.md",
     "Java/入门/数据类型.md",
+    "Java/入门/标识符&关键字.md",
     "99-Attachment/99-Attachment.md",
     "60-Canvas/60-Canvas.md",
     "10-Help/10-Help.md",
     "00-Tips/00-Tips.md",
     "60-Canvas/Home_middle.canvas",
-    "Java/入门/标识符&关键字.md",
     "00-Tips/插件介绍/插件介绍.md",
-    "00-Tips/魔方配色设置说明.md",
-    "00-Tips/配色分享monokai pro 配色.md"
+    "00-Tips/魔方配色设置说明.md"
   ]
 }

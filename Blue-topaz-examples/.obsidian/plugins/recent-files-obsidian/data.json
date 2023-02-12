@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "标识符&关键字",
-      "path": "Java/入门/标识符&关键字.md"
-    },
-    {
       "basename": "数据类型",
       "path": "Java/入门/数据类型.md"
+    },
+    {
+      "basename": "Demo Note",
+      "path": "Demo Note.md"
+    },
+    {
+      "basename": "标识符&关键字",
+      "path": "Java/入门/标识符&关键字.md"
     },
     {
       "basename": "99-Attachment",
@@ -47,10 +51,6 @@
     {
       "basename": "Changlog",
       "path": "Changlog.md"
-    },
-    {
-      "basename": "Demo Note",
-      "path": "Demo Note.md"
     },
     {
       "basename": "注释",
