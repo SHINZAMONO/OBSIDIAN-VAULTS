@@ -9,6 +9,10 @@
       "path": "Java/入门/标识符&关键字.md"
     },
     {
+      "basename": "Home_middle",
+      "path": "60-Canvas/Home_middle.canvas"
+    },
+    {
       "basename": "99-Attachment",
       "path": "99-Attachment/99-Attachment.md"
     },
@@ -23,10 +27,6 @@
     {
       "basename": "00-Tips",
       "path": "00-Tips/00-Tips.md"
-    },
-    {
-      "basename": "Home_middle",
-      "path": "60-Canvas/Home_middle.canvas"
     },
     {
       "basename": "注释",

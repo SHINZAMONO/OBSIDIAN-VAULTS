@@ -26,13 +26,13 @@
             }
           },
           {
-            "id": "59991e13d79f6d66",
+            "id": "8cf2ee243c80efdd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "Java/入门/数据类型.md",
-                "mode": "source",
+                "mode": "preview",
                 "backlinks": false,
                 "source": false
               }
@@ -113,7 +113,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 276.9945435523987
+    "width": 276.9945435523987,
+    "collapsed": true
   },
   "right": {
     "id": "4e390742ffc29613",
@@ -248,15 +249,15 @@
       "obsidian-memos:Memos": false
     }
   },
-  "active": "59991e13d79f6d66",
+  "active": "37c8f55a8ef7a09c",
   "lastOpenFiles": [
     "Java/入门/标识符&关键字.md",
+    "60-Canvas/Home_middle.canvas",
     "Java/入门/数据类型.md",
     "99-Attachment/99-Attachment.md",
     "60-Canvas/60-Canvas.md",
     "10-Help/10-Help.md",
     "00-Tips/00-Tips.md",
-    "60-Canvas/Home_middle.canvas",
     "Java/入门/注释.md",
     "Demo Note.md",
     "00-Tips/插件介绍/插件介绍.md"
