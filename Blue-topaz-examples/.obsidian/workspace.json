@@ -32,7 +32,7 @@
               "type": "markdown",
               "state": {
                 "file": "Java/入门/数据类型.md",
-                "mode": "preview",
+                "mode": "source",
                 "backlinks": false,
                 "source": false
               }
@@ -249,7 +249,7 @@
       "obsidian-memos:Memos": false
     }
   },
-  "active": "37c8f55a8ef7a09c",
+  "active": "8cf2ee243c80efdd",
   "lastOpenFiles": [
     "Java/入门/标识符&关键字.md",
     "60-Canvas/Home_middle.canvas",
