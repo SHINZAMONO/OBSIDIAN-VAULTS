@@ -9,14 +9,6 @@
       "path": "Java/入门/标识符&关键字.md"
     },
     {
-      "basename": "注释",
-      "path": "Java/入门/注释.md"
-    },
-    {
-      "basename": "Demo Note",
-      "path": "Demo Note.md"
-    },
-    {
       "basename": "99-Attachment",
       "path": "99-Attachment/99-Attachment.md"
     },
@@ -35,6 +27,14 @@
     {
       "basename": "Home_middle",
       "path": "60-Canvas/Home_middle.canvas"
+    },
+    {
+      "basename": "注释",
+      "path": "Java/入门/注释.md"
+    },
+    {
+      "basename": "Demo Note",
+      "path": "Demo Note.md"
     },
     {
       "basename": "插件介绍",
