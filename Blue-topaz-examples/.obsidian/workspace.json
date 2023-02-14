@@ -63,9 +63,22 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "97a86b40cbc0f92c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Java/入门/运算符.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -165,7 +178,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java/入门/变量、常量、作用域.md"
+                "file": "Java/入门/运算符.md"
               }
             }
           },
@@ -196,7 +209,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java/入门/变量、常量、作用域.md",
+                "file": "Java/入门/运算符.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "byModifiedTime",
@@ -213,7 +226,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java/入门/变量、常量、作用域.md",
+                "file": "Java/入门/运算符.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -275,10 +288,10 @@
       "obsidian-memos:Memos": false
     }
   },
-  "active": "d9cae101d4bf2703",
+  "active": "97a86b40cbc0f92c",
   "lastOpenFiles": [
-    "Java/入门/常量.md",
     "Java/入门/变量、常量、作用域.md",
+    "Java/入门/常量.md",
     "Java/入门/数据类型.md",
     "Java/入门/标识符&关键字.md",
     "Java/入门/注释.md",
