@@ -50,9 +50,22 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "d9cae101d4bf2703",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Java/入门/变量、常量、作用域.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -262,8 +275,10 @@
       "obsidian-memos:Memos": false
     }
   },
-  "active": "f6b42b41dbc4272a",
+  "active": "d9cae101d4bf2703",
   "lastOpenFiles": [
+    "Java/入门/常量.md",
+    "Java/入门/变量、常量、作用域.md",
     "Java/入门/数据类型.md",
     "Java/入门/标识符&关键字.md",
     "Java/入门/注释.md",
@@ -271,8 +286,6 @@
     "99-Attachment/99-Attachment.md",
     "60-Canvas/60-Canvas.md",
     "10-Help/10-Help.md",
-    "00-Tips/00-Tips.md",
-    "Demo Note.md",
-    "00-Tips/插件介绍/插件介绍.md"
+    "00-Tips/00-Tips.md"
   ]
 }
