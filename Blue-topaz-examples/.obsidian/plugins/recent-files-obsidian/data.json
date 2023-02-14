@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "变量、常量、作用域",
+      "path": "Java/入门/变量、常量、作用域.md"
+    },
+    {
       "basename": "数据类型",
       "path": "Java/入门/数据类型.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Table+",
       "path": "88-Template/EnablepluginList/Table+.md"
-    },
-    {
-      "basename": "View+",
-      "path": "88-Template/EnablepluginList/View+.md"
     }
   ],
   "omittedPaths": [],
