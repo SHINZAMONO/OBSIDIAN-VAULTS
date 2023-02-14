@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
+      "basename": "数据类型",
+      "path": "Java/入门/数据类型.md"
+    },
+    {
       "basename": "标识符&关键字",
       "path": "Java/入门/标识符&关键字.md"
     },
     {
-      "basename": "数据类型",
-      "path": "Java/入门/数据类型.md"
+      "basename": "注释",
+      "path": "Java/入门/注释.md"
     },
     {
       "basename": "Home_middle",
@@ -27,10 +31,6 @@
     {
       "basename": "00-Tips",
       "path": "00-Tips/00-Tips.md"
-    },
-    {
-      "basename": "注释",
-      "path": "Java/入门/注释.md"
     },
     {
       "basename": "Demo Note",
