@@ -3,11 +3,10 @@
 
 :root {
     --mm-color-text: #fff;
-    --mm-line-height: 1em;
 }
 
 [hidden] {
-    display: none;
+    display: none !important;
 }
 
 .mmng-coloring-approach-description {
@@ -26,9 +25,10 @@
     display: block;
 }
 
-.markmap div {
-    line-height: var(--mm-line-height, 1em);
-}
+.markmap div { line-height: var(--mm-line-height, 1em) }
+
+
+/* Code blocks inside mindmaps */
 
 /* Remove markmap's code block style */
 .markmap-foreign.markmap-foreign code {
@@ -61,7 +61,6 @@
 
 .block-language-markmap { border-radius: 5px }
 .block-language-markmap svg { border-radius: 5px }
-.block-language-markmap div { line-height: var(--mm-line-height, 1em) }
 
 .mmng-highlight-inline .block-language-markmap {
     background-color: var(--code-background);
@@ -79,7 +78,7 @@
 
 /* Toolbars */
 
-.markmap-toolbar-container .mm-toolbar {
+.mm-toolbar {
     position: absolute;
     bottom: 2rem;
     right: 1rem;
@@ -95,16 +94,16 @@
     justify-content: space-between;
 }
 
-.markmap-toolbar-container .mm-toolbar .mm-toolbar-brand {
+.mm-toolbar .mm-toolbar-brand {
     display: none;
 }
 
-.markmap-toolbar-container .mm-toolbar .mm-toolbar-item {
+.mm-toolbar .mm-toolbar-item {
     height: 20px;
     color: black;
 }
 
-.markmap-toolbar-container .mm-toolbar .mm-toolbar-item.active,
-.markmap-toolbar-container .mm-toolbar .mm-toolbar-item:hover {
+.mm-toolbar .mm-toolbar-item.active,
+.mm-toolbar .mm-toolbar-item:hover {
     color: brown;
 }

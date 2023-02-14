@@ -26,13 +26,13 @@
             }
           },
           {
-            "id": "8cf2ee243c80efdd",
+            "id": "bcf00cb49b00bce9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "Java/入门/数据类型.md",
-                "mode": "source",
+                "mode": "preview",
                 "backlinks": false,
                 "source": false
               }
@@ -113,8 +113,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 276.9945435523987,
-    "collapsed": true
+    "width": 276.9945435523987
   },
   "right": {
     "id": "4e390742ffc29613",
@@ -224,8 +223,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 265,
-    "collapsed": true
+    "width": 265
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -249,10 +247,10 @@
       "obsidian-memos:Memos": false
     }
   },
-  "active": "8cf2ee243c80efdd",
+  "active": "37c8f55a8ef7a09c",
   "lastOpenFiles": [
-    "Java/入门/标识符&关键字.md",
     "60-Canvas/Home_middle.canvas",
+    "Java/入门/标识符&关键字.md",
     "Java/入门/数据类型.md",
     "99-Attachment/99-Attachment.md",
     "60-Canvas/60-Canvas.md",

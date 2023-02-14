@@ -3510,14 +3510,16 @@ var AutoCompleteSuggest = class extends import_obsidian3.EditorSuggest {
         ins.updateFrontMatterToken();
       }
     );
-    ins.metadataCacheChangeRef = app.metadataCache.on("changed", (f) => {
+    ins.metadataCacheChangeRef = app.metadataCache.on("changed", async (f) => {
       ins.updateFrontMatterTokenIndex(f);
       if (!ins.appHelper.isActiveFile(f)) {
         ins.updateFrontMatterToken();
       }
       if (settings.updateInternalLinksOnSave) {
+        await sleep(50);
         const currentCache = ins.appHelper.getUnresolvedLinks(f);
         if (!setEquals(ins.previousLinksCacheInActiveFile, currentCache)) {
+          console.log("refresh");
           ins.refreshInternalLinkTokens();
           ins.previousLinksCacheInActiveFile = currentCache;
         }
