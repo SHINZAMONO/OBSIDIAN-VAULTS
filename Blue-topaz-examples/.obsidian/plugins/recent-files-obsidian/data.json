@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "未命名",
+      "path": "60-Canvas/未命名.canvas"
+    },
+    {
+      "basename": "60-Canvas",
+      "path": "60-Canvas/60-Canvas.md"
+    },
+    {
+      "basename": "Home_middle",
+      "path": "60-Canvas/Home_middle.canvas"
+    },
+    {
       "basename": "运算符",
       "path": "Java/入门/运算符.md"
     },
@@ -21,16 +33,8 @@
       "path": "Java/入门/注释.md"
     },
     {
-      "basename": "Home_middle",
-      "path": "60-Canvas/Home_middle.canvas"
-    },
-    {
       "basename": "99-Attachment",
       "path": "99-Attachment/99-Attachment.md"
-    },
-    {
-      "basename": "60-Canvas",
-      "path": "60-Canvas/60-Canvas.md"
     },
     {
       "basename": "10-Help",
@@ -195,10 +199,6 @@
     {
       "basename": "可以编辑的dv表格",
       "path": "77-Example/◾ Dataview相关实例/可以编辑的dv表格.md"
-    },
-    {
-      "basename": "卡片视图 展示笔记",
-      "path": "77-Example/◾ Dataview相关实例/卡片视图 展示笔记.md"
     }
   ],
   "omittedPaths": [],

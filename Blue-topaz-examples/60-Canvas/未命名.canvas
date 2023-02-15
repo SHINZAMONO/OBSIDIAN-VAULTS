@@ -1,0 +1,21 @@
+{
+	"nodes":[
+		{"id":"1558c18363742679","x":-125,"y":-30,"width":250,"height":60,"type":"text","text":"决策树"},
+		{"id":"b8ac1bc708ad1b68","x":209,"y":30,"width":250,"height":60,"type":"text","text":"奋斗攒两年"},
+		{"id":"3577f6b4b8c209e5","x":209,"y":-90,"width":250,"height":60,"type":"text","text":"找富婆"},
+		{"id":"2c9f11467f9bbff0","x":531,"y":-90,"width":250,"height":60,"type":"text","text":"有没有房"},
+		{"id":"d7d5e097ab4abc75","x":1229,"y":-208,"width":250,"height":60,"type":"text","text":"软饭"},
+		{"id":"3378f22e5650ee43","x":894,"y":-208,"width":250,"height":60,"type":"text","text":"有没有地暖"},
+		{"id":"95a81f70101b3dc0","x":894,"y":-30,"width":250,"height":60,"type":"text","text":"有请下一位"},
+		{"id":"7a2a425cc0cea897","x":531,"y":30,"width":250,"height":60,"type":"text","text":"看西安首付"}
+	],
+	"edges":[
+		{"id":"646367a1a4413a02","fromNode":"1558c18363742679","fromSide":"right","toNode":"3577f6b4b8c209e5","toSide":"left"},
+		{"id":"9c23c0d0928f9ea9","fromNode":"1558c18363742679","fromSide":"right","toNode":"b8ac1bc708ad1b68","toSide":"left"},
+		{"id":"2c36310f6e675359","fromNode":"3577f6b4b8c209e5","fromSide":"right","toNode":"2c9f11467f9bbff0","toSide":"left"},
+		{"id":"3eff70a053f47764","fromNode":"2c9f11467f9bbff0","fromSide":"right","toNode":"3378f22e5650ee43","toSide":"left","label":"有"},
+		{"id":"d385eb14b2b73cdc","fromNode":"3378f22e5650ee43","fromSide":"right","toNode":"d7d5e097ab4abc75","toSide":"left"},
+		{"id":"849a0fffee3d9ee8","fromNode":"2c9f11467f9bbff0","fromSide":"right","toNode":"95a81f70101b3dc0","toSide":"left"},
+		{"id":"610a14b1d1925bc9","fromNode":"b8ac1bc708ad1b68","fromSide":"right","toNode":"7a2a425cc0cea897","toSide":"left"}
+	]
+}

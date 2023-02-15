@@ -26,59 +26,23 @@
             }
           },
           {
-            "id": "bcf00cb49b00bce9",
+            "id": "d3b4948e42653321",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "Java/入门/数据类型.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f6b42b41dbc4272a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Java/入门/变量、常量、作用域.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d9cae101d4bf2703",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Java/入门/变量、常量、作用域.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "97a86b40cbc0f92c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Java/入门/运算符.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
+                "file": "60-Canvas/未命名.canvas",
+                "viewState": {
+                  "x": 649.8009257935645,
+                  "y": -69.86525044900395,
+                  "zoom": -0.49933298314611224,
+                  "snapToGrid": false
+                }
               }
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -178,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java/入门/运算符.md"
+                "file": "60-Canvas/未命名.canvas"
               }
             }
           },
@@ -209,7 +173,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java/入门/运算符.md",
+                "file": "60-Canvas/未命名.canvas",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "byModifiedTime",
@@ -226,7 +190,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java/入门/运算符.md",
+                "file": "60-Canvas/未命名.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -263,8 +227,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 265,
-    "collapsed": true
+    "width": 265
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -288,16 +251,16 @@
       "obsidian-memos:Memos": false
     }
   },
-  "active": "97a86b40cbc0f92c",
+  "active": "d3b4948e42653321",
   "lastOpenFiles": [
+    "60-Canvas/60-Canvas.md",
+    "60-Canvas/Home_middle.canvas",
     "Java/入门/变量、常量、作用域.md",
     "Java/入门/常量.md",
     "Java/入门/数据类型.md",
     "Java/入门/标识符&关键字.md",
     "Java/入门/注释.md",
-    "60-Canvas/Home_middle.canvas",
     "99-Attachment/99-Attachment.md",
-    "60-Canvas/60-Canvas.md",
     "10-Help/10-Help.md",
     "00-Tips/00-Tips.md"
   ]
