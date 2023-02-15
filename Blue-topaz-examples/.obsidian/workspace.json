@@ -142,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "60-Canvas/未命名.canvas"
+                "file": "88-Template/常用工具.md"
               }
             }
           },
@@ -173,7 +173,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "60-Canvas/未命名.canvas",
+                "file": "88-Template/常用工具.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "byModifiedTime",
@@ -190,7 +190,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "60-Canvas/未命名.canvas",
+                "file": "88-Template/常用工具.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -251,8 +251,9 @@
       "obsidian-memos:Memos": false
     }
   },
-  "active": "d3b4948e42653321",
+  "active": "8851ccb0aa4e524a",
   "lastOpenFiles": [
+    "60-Canvas/未命名.canvas",
     "60-Canvas/60-Canvas.md",
     "60-Canvas/Home_middle.canvas",
     "Java/入门/变量、常量、作用域.md",
@@ -261,7 +262,6 @@
     "Java/入门/标识符&关键字.md",
     "Java/入门/注释.md",
     "99-Attachment/99-Attachment.md",
-    "10-Help/10-Help.md",
-    "00-Tips/00-Tips.md"
+    "10-Help/10-Help.md"
   ]
 }

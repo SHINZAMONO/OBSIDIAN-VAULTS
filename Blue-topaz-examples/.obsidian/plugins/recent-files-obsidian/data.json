@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "常用工具",
+      "path": "88-Template/常用工具.md"
+    },
+    {
       "basename": "未命名",
       "path": "60-Canvas/未命名.canvas"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "README",
       "path": "88-Template/script/notesList/README.md"
-    },
-    {
-      "basename": "可以编辑的dv表格",
-      "path": "77-Example/◾ Dataview相关实例/可以编辑的dv表格.md"
     }
   ],
   "omittedPaths": [],
