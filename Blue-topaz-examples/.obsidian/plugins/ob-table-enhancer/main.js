@@ -1281,8 +1281,6 @@ function getClickHandler(plugin) {
     const cellEl = getEditableNode(e.targetNode);
     if (!cellEl)
       return;
-    e.stopImmediatePropagation();
-    e.preventDefault();
     let tableEl = cellEl.parentNode;
     while (tableEl) {
       if (tableEl instanceof HTMLTableElement)
@@ -1293,8 +1291,12 @@ function getClickHandler(plugin) {
       console.error("Cannot get table element of cell ", cellEl);
       return;
     }
-    if (tableEl.hasClass("dataview"))
+    if (!(editorView == null ? void 0 : editorView.contentDOM.contains(tableEl)))
       return;
+    if (tableEl.classList.length > 0)
+      return;
+    e.stopImmediatePropagation();
+    e.preventDefault();
     const { tableLine, i, j } = getCellInfo(cellEl, plugin, tableEl);
     if (cellEl.isContentEditable) {
       return;

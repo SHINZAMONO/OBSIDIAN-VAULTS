@@ -2305,7 +2305,8 @@ var AppHelper = class {
     );
   }
   getUnresolvedLinks(file) {
-    const countsByLink = this.unsafeApp.metadataCache.unresolvedLinks[file.path];
+    var _a;
+    const countsByLink = (_a = this.unsafeApp.metadataCache.unresolvedLinks[file.path]) != null ? _a : {};
     return new Set(Object.keys(countsByLink));
   }
   getMarkdownFileByPath(path) {
@@ -3519,7 +3520,6 @@ var AutoCompleteSuggest = class extends import_obsidian3.EditorSuggest {
         await sleep(50);
         const currentCache = ins.appHelper.getUnresolvedLinks(f);
         if (!setEquals(ins.previousLinksCacheInActiveFile, currentCache)) {
-          console.log("refresh");
           ins.refreshInternalLinkTokens();
           ins.previousLinksCacheInActiveFile = currentCache;
         }
