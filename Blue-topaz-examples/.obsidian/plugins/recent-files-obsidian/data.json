@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "包机制",
+      "path": "Java/入门/包机制.md"
+    },
+    {
+      "basename": "运算符",
+      "path": "Java/入门/运算符.md"
+    },
+    {
       "basename": "变量、常量、作用域",
       "path": "Java/入门/变量、常量、作用域.md"
     },
@@ -27,10 +35,6 @@
     {
       "basename": "60-Canvas",
       "path": "60-Canvas/60-Canvas.md"
-    },
-    {
-      "basename": "运算符",
-      "path": "Java/入门/运算符.md"
     },
     {
       "basename": "注释",
@@ -195,10 +199,6 @@
     {
       "basename": "如何把示例库移植到你现有的库中？",
       "path": "00-Tips/示例库移植说明/如何把示例库移植到你现有的库中？.md"
-    },
-    {
-      "basename": "README",
-      "path": "88-Template/script/notesList/README.md"
     }
   ],
   "omittedPaths": [],
