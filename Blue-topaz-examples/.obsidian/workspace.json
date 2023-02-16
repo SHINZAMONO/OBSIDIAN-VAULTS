@@ -31,7 +31,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java/入门/数据类型.md",
+                "file": "Java/入门/变量、常量、作用域.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -139,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java/入门/数据类型.md"
+                "file": "Java/入门/变量、常量、作用域.md"
               }
             }
           },
@@ -170,7 +170,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java/入门/数据类型.md",
+                "file": "Java/入门/变量、常量、作用域.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "byModifiedTime",
@@ -187,7 +187,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java/入门/数据类型.md",
+                "file": "Java/入门/变量、常量、作用域.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -251,13 +251,13 @@
   },
   "active": "37c8f55a8ef7a09c",
   "lastOpenFiles": [
+    "Java/入门/数据类型.md",
     "Java/入门/变量、常量、作用域.md",
     "Java/入门/标识符&关键字.md",
     "60-Canvas/Home_middle.canvas",
     "60-Canvas/未命名.canvas",
     "60-Canvas/60-Canvas.md",
     "Java/入门/常量.md",
-    "Java/入门/数据类型.md",
     "Java/入门/注释.md",
     "99-Attachment/99-Attachment.md",
     "10-Help/10-Help.md"
