@@ -1,16 +1,24 @@
 {
   "recentFiles": [
     {
+      "basename": "变量、常量、作用域",
+      "path": "Java/入门/变量、常量、作用域.md"
+    },
+    {
       "basename": "包机制",
       "path": "Java/入门/包机制.md"
     },
     {
-      "basename": "运算符",
-      "path": "Java/入门/运算符.md"
+      "basename": "60-Canvas",
+      "path": "60-Canvas/60-Canvas.md"
     },
     {
-      "basename": "变量、常量、作用域",
-      "path": "Java/入门/变量、常量、作用域.md"
+      "basename": "Home_middle",
+      "path": "60-Canvas/Home_middle.canvas"
+    },
+    {
+      "basename": "运算符",
+      "path": "Java/入门/运算符.md"
     },
     {
       "basename": "数据类型",
@@ -21,20 +29,12 @@
       "path": "Java/入门/标识符&关键字.md"
     },
     {
-      "basename": "Home_middle",
-      "path": "60-Canvas/Home_middle.canvas"
-    },
-    {
       "basename": "常用工具",
       "path": "88-Template/常用工具.md"
     },
     {
       "basename": "未命名",
       "path": "60-Canvas/未命名.canvas"
-    },
-    {
-      "basename": "60-Canvas",
-      "path": "60-Canvas/60-Canvas.md"
     },
     {
       "basename": "注释",
