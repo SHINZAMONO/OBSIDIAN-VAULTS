@@ -26,13 +26,13 @@
             }
           },
           {
-            "id": "86a3f0fe3966f4e5",
+            "id": "528ba2d1a5104f3c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java/入门/运算符.md",
-                "mode": "source",
+                "file": "50-Inbox/50-Inbox.md",
+                "mode": "preview",
                 "backlinks": false,
                 "source": false
               }
@@ -113,8 +113,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 276.9945435523987,
-    "collapsed": true
+    "width": 276.9945435523987
   },
   "right": {
     "id": "4e390742ffc29613",
@@ -139,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java/入门/运算符.md"
+                "file": "50-Inbox/50-Inbox.md"
               }
             }
           },
@@ -170,7 +169,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java/入门/运算符.md",
+                "file": "50-Inbox/50-Inbox.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "byModifiedTime",
@@ -187,7 +186,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java/入门/运算符.md",
+                "file": "50-Inbox/50-Inbox.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -249,12 +248,12 @@
       "obsidian-memos:Memos": false
     }
   },
-  "active": "86a3f0fe3966f4e5",
+  "active": "528ba2d1a5104f3c",
   "lastOpenFiles": [
-    "Java/入门/变量、常量、作用域.md",
     "Java/入门/包机制.md",
-    "60-Canvas/60-Canvas.md",
+    "Java/入门/变量、常量、作用域.md",
     "60-Canvas/Home_middle.canvas",
+    "60-Canvas/60-Canvas.md",
     "Java/入门/运算符.md",
     "Java/入门/数据类型.md",
     "Java/入门/标识符&关键字.md",

@@ -456,6 +456,9 @@ function lowerIncludes(one, other) {
 function lowerStartsWith(a, b) {
   return a.toLowerCase().startsWith(b.toLowerCase());
 }
+function lowerFuzzy(a, b) {
+  return microFuzzy(a.toLowerCase(), b.toLowerCase());
+}
 function capitalizeFirstLetter(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
@@ -489,6 +492,18 @@ function findCommonPrefix(strs) {
     }
   }
   return strs[0].substring(0, min);
+}
+function microFuzzy(value, query) {
+  let i = 0;
+  for (let j = 0; j < value.length; j++) {
+    if (value[j] === query[i]) {
+      i++;
+    }
+    if (i === query.length) {
+      return true;
+    }
+  }
+  return false;
 }
 
 // src/tokenizer/tokenizers/DefaultTokenizer.ts
@@ -2451,7 +2466,7 @@ function pushWord(wordsByFirstLetter, key, word) {
   }
   wordsByFirstLetter[key].push(word);
 }
-function judge(word, query, queryStartWithUpper) {
+function judge(word, query, queryStartWithUpper, fuzzy) {
   var _a;
   if (query === "") {
     return {
@@ -2463,7 +2478,8 @@ function judge(word, query, queryStartWithUpper) {
       alias: false
     };
   }
-  if (lowerStartsWith(word.value, query)) {
+  const matcher = fuzzy ? lowerFuzzy : lowerStartsWith;
+  if (matcher(word.value, query)) {
     if (queryStartWithUpper && word.type !== "internalLink" && word.type !== "frontMatter") {
       const c = capitalizeFirstLetter(word.value);
       return {
@@ -2486,7 +2502,7 @@ function judge(word, query, queryStartWithUpper) {
       };
     }
   }
-  const matchedAlias = (_a = word.aliases) == null ? void 0 : _a.find((a) => lowerStartsWith(a, query));
+  const matchedAlias = (_a = word.aliases) == null ? void 0 : _a.find((a) => matcher(a, query));
   if (matchedAlias) {
     return {
       word: {
@@ -2503,9 +2519,10 @@ function judge(word, query, queryStartWithUpper) {
   };
 }
 function suggestWords(indexedWords, query, maxNum, option = {}) {
-  var _a, _b, _c, _d, _e, _f, _g, _h, _i, _j, _k, _l, _m, _n, _o, _p;
+  var _a, _b, _c, _d, _e, _f, _g, _h, _i, _j, _k, _l, _m, _n, _o, _p, _q;
   const { frontMatter, selectionHistoryStorage } = option;
   const queryStartWithUpper = capitalizeFirstLetter(query) === query;
+  const fuzzy = (_a = option.fuzzy) != null ? _a : false;
   const flattenFrontMatterWords = () => {
     var _a2, _b2;
     if (frontMatter === "alias" || frontMatter === "aliases") {
@@ -2517,25 +2534,25 @@ function suggestWords(indexedWords, query, maxNum, option = {}) {
     return [];
   };
   const words = queryStartWithUpper ? frontMatter ? flattenFrontMatterWords() : [
-    ...(_a = indexedWords.currentFile[query.charAt(0)]) != null ? _a : [],
-    ...(_b = indexedWords.currentFile[query.charAt(0).toLowerCase()]) != null ? _b : [],
-    ...(_c = indexedWords.currentVault[query.charAt(0)]) != null ? _c : [],
-    ...(_d = indexedWords.currentVault[query.charAt(0).toLowerCase()]) != null ? _d : [],
-    ...(_e = indexedWords.customDictionary[query.charAt(0)]) != null ? _e : [],
-    ...(_f = indexedWords.customDictionary[query.charAt(0).toLowerCase()]) != null ? _f : [],
-    ...(_g = indexedWords.internalLink[query.charAt(0)]) != null ? _g : [],
-    ...(_h = indexedWords.internalLink[query.charAt(0).toLowerCase()]) != null ? _h : []
+    ...(_b = indexedWords.currentFile[query.charAt(0)]) != null ? _b : [],
+    ...(_c = indexedWords.currentFile[query.charAt(0).toLowerCase()]) != null ? _c : [],
+    ...(_d = indexedWords.currentVault[query.charAt(0)]) != null ? _d : [],
+    ...(_e = indexedWords.currentVault[query.charAt(0).toLowerCase()]) != null ? _e : [],
+    ...(_f = indexedWords.customDictionary[query.charAt(0)]) != null ? _f : [],
+    ...(_g = indexedWords.customDictionary[query.charAt(0).toLowerCase()]) != null ? _g : [],
+    ...(_h = indexedWords.internalLink[query.charAt(0)]) != null ? _h : [],
+    ...(_i = indexedWords.internalLink[query.charAt(0).toLowerCase()]) != null ? _i : []
   ] : frontMatter ? flattenFrontMatterWords() : [
-    ...(_i = indexedWords.currentFile[query.charAt(0)]) != null ? _i : [],
-    ...(_j = indexedWords.currentFile[query.charAt(0).toUpperCase()]) != null ? _j : [],
-    ...(_k = indexedWords.currentVault[query.charAt(0)]) != null ? _k : [],
-    ...(_l = indexedWords.currentVault[query.charAt(0).toUpperCase()]) != null ? _l : [],
-    ...(_m = indexedWords.customDictionary[query.charAt(0)]) != null ? _m : [],
-    ...(_n = indexedWords.customDictionary[query.charAt(0).toUpperCase()]) != null ? _n : [],
-    ...(_o = indexedWords.internalLink[query.charAt(0)]) != null ? _o : [],
-    ...(_p = indexedWords.internalLink[query.charAt(0).toUpperCase()]) != null ? _p : []
+    ...(_j = indexedWords.currentFile[query.charAt(0)]) != null ? _j : [],
+    ...(_k = indexedWords.currentFile[query.charAt(0).toUpperCase()]) != null ? _k : [],
+    ...(_l = indexedWords.currentVault[query.charAt(0)]) != null ? _l : [],
+    ...(_m = indexedWords.currentVault[query.charAt(0).toUpperCase()]) != null ? _m : [],
+    ...(_n = indexedWords.customDictionary[query.charAt(0)]) != null ? _n : [],
+    ...(_o = indexedWords.customDictionary[query.charAt(0).toUpperCase()]) != null ? _o : [],
+    ...(_p = indexedWords.internalLink[query.charAt(0)]) != null ? _p : [],
+    ...(_q = indexedWords.internalLink[query.charAt(0).toUpperCase()]) != null ? _q : []
   ];
-  const filteredJudgement = Array.from(words).map((x) => judge(x, query, queryStartWithUpper)).filter((x) => x.value !== void 0);
+  const filteredJudgement = Array.from(words).map((x) => judge(x, query, queryStartWithUpper, fuzzy)).filter((x) => x.value !== void 0);
   const latestUpdated = max(
     filteredJudgement.map(
       (x) => {
@@ -2575,7 +2592,7 @@ function suggestWords(indexedWords, query, maxNum, option = {}) {
   }).map((x) => x.word).slice(0, maxNum);
   return uniqWith(candidate, suggestionUniqPredicate);
 }
-function judgeByPartialMatch(word, query, queryStartWithUpper) {
+function judgeByPartialMatch(word, query, queryStartWithUpper, fuzzy) {
   var _a, _b;
   if (query === "") {
     return {
@@ -2584,7 +2601,9 @@ function judgeByPartialMatch(word, query, queryStartWithUpper) {
       alias: false
     };
   }
-  if (lowerStartsWith(word.value, query)) {
+  const startsWithMatcher = fuzzy ? lowerFuzzy : lowerStartsWith;
+  const includesMatcher = fuzzy ? lowerFuzzy : lowerIncludes;
+  if (startsWithMatcher(word.value, query)) {
     if (queryStartWithUpper && word.type !== "internalLink" && word.type !== "frontMatter") {
       const c = capitalizeFirstLetter(word.value);
       return { word: { ...word, value: c, hit: c }, value: c, alias: false };
@@ -2597,7 +2616,7 @@ function judgeByPartialMatch(word, query, queryStartWithUpper) {
     }
   }
   const matchedAliasStarts = (_a = word.aliases) == null ? void 0 : _a.find(
-    (a) => lowerStartsWith(a, query)
+    (a) => startsWithMatcher(a, query)
   );
   if (matchedAliasStarts) {
     return {
@@ -2606,7 +2625,7 @@ function judgeByPartialMatch(word, query, queryStartWithUpper) {
       alias: true
     };
   }
-  if (lowerIncludes(word.value, query)) {
+  if (includesMatcher(word.value, query)) {
     return {
       word: { ...word, hit: word.value },
       value: word.value,
@@ -2614,7 +2633,7 @@ function judgeByPartialMatch(word, query, queryStartWithUpper) {
     };
   }
   const matchedAliasIncluded = (_b = word.aliases) == null ? void 0 : _b.find(
-    (a) => lowerIncludes(a, query)
+    (a) => includesMatcher(a, query)
   );
   if (matchedAliasIncluded) {
     return {
@@ -2626,15 +2645,17 @@ function judgeByPartialMatch(word, query, queryStartWithUpper) {
   return { word, alias: false };
 }
 function suggestWordsByPartialMatch(indexedWords, query, maxNum, option = {}) {
+  var _a;
   const { frontMatter, selectionHistoryStorage } = option;
   const queryStartWithUpper = capitalizeFirstLetter(query) === query;
+  const fuzzy = (_a = option.fuzzy) != null ? _a : false;
   const flatObjectValues = (object) => Object.values(object).flat();
   const flattenFrontMatterWords = () => {
-    var _a, _b;
+    var _a2, _b;
     if (frontMatter === "alias" || frontMatter === "aliases") {
       return [];
     }
-    if (frontMatter && ((_a = indexedWords.frontMatter) == null ? void 0 : _a[frontMatter])) {
+    if (frontMatter && ((_a2 = indexedWords.frontMatter) == null ? void 0 : _a2[frontMatter])) {
       return Object.values((_b = indexedWords.frontMatter) == null ? void 0 : _b[frontMatter]).flat();
     }
     return [];
@@ -2645,12 +2666,12 @@ function suggestWordsByPartialMatch(indexedWords, query, maxNum, option = {}) {
     ...flatObjectValues(indexedWords.customDictionary),
     ...flatObjectValues(indexedWords.internalLink)
   ];
-  const filteredJudgement = Array.from(words).map((x) => judgeByPartialMatch(x, query, queryStartWithUpper)).filter((x) => x.value !== void 0);
+  const filteredJudgement = Array.from(words).map((x) => judgeByPartialMatch(x, query, queryStartWithUpper, fuzzy)).filter((x) => x.value !== void 0);
   const latestUpdated = max(
     filteredJudgement.map(
       (x) => {
-        var _a, _b;
-        return (_b = (_a = selectionHistoryStorage == null ? void 0 : selectionHistoryStorage.getSelectionHistory(x.word)) == null ? void 0 : _a.lastUpdated) != null ? _b : 0;
+        var _a2, _b;
+        return (_b = (_a2 = selectionHistoryStorage == null ? void 0 : selectionHistoryStorage.getSelectionHistory(x.word)) == null ? void 0 : _a2.lastUpdated) != null ? _b : 0;
       }
     ),
     0
@@ -3650,7 +3671,8 @@ var AutoCompleteSuggest = class extends import_obsidian3.EditorSuggest {
             this.settings.maxNumberOfSuggestions,
             {
               frontMatter: parsedQuery.currentFrontMatter,
-              selectionHistoryStorage: this.selectionHistoryStorage
+              selectionHistoryStorage: this.selectionHistoryStorage,
+              fuzzy: this.settings.fuzzyMatch
             }
           ).map((word) => ({ ...word, offset: q.offset }));
         }).flat();
@@ -4142,6 +4164,27 @@ var AutoCompleteSuggest = class extends import_obsidian3.EditorSuggest {
         break;
     }
   }
+  constructInternalLinkText(word) {
+    if (this.settings.suggestInternalLinkWithAlias && word.aliasMeta) {
+      const { link: link2 } = this.appHelper.optimizeMarkdownLinkText(
+        word.aliasMeta.origin
+      );
+      return this.appHelper.useWikiLinks ? `[[${link2}|${word.value}]]` : `[${word.value}](${encodeSpace(link2)}.md)`;
+    }
+    const pattern = this.settings.excludedRegExpFromDisplayedInternalLink.length > 0 ? new RegExp(this.settings.excludedRegExpFromDisplayedInternalLink) : null;
+    const match = (value) => pattern ? Boolean(value.match(pattern)) : false;
+    const excludes = (value) => pattern ? value.replace(pattern, "") : value;
+    const { displayed, link } = this.appHelper.optimizeMarkdownLinkText(
+      word.phantom ? word.value : word.createdPath
+    );
+    if (this.appHelper.newLinkFormat === "shortest" && displayed.includes("/")) {
+      return this.appHelper.useWikiLinks ? `[[${link}|${word.value}]]` : `[${word.value}](${encodeSpace(link)}.md)`;
+    }
+    if (this.appHelper.useWikiLinks) {
+      return match(link) ? `[[${link}|${excludes(link)}]]` : `[[${link}]]`;
+    }
+    return match(displayed) ? `[${excludes(displayed)}](${encodeSpace(link)}.md)` : `[${displayed}](${encodeSpace(link)}.md)`;
+  }
   selectSuggestion(word, evt) {
     var _a, _b;
     if (!this.context) {
@@ -4149,21 +4192,7 @@ var AutoCompleteSuggest = class extends import_obsidian3.EditorSuggest {
     }
     let insertedText = word.value;
     if (word.type === "internalLink") {
-      if (this.settings.suggestInternalLinkWithAlias && word.aliasMeta) {
-        const { link } = this.appHelper.optimizeMarkdownLinkText(
-          word.aliasMeta.origin
-        );
-        insertedText = this.appHelper.useWikiLinks ? `[[${link}|${word.value}]]` : `[${word.value}](${encodeSpace(link)}.md)`;
-      } else {
-        const { displayed, link } = this.appHelper.optimizeMarkdownLinkText(
-          word.phantom ? word.value : word.createdPath
-        );
-        if (this.appHelper.newLinkFormat === "shortest" && displayed.includes("/")) {
-          insertedText = this.appHelper.useWikiLinks ? `[[${link}|${word.value}]]` : `[${word.value}](${encodeSpace(link)}.md)`;
-        } else {
-          insertedText = this.appHelper.useWikiLinks ? `[[${link}]]` : `[${displayed}](${encodeSpace(link)}.md)`;
-        }
-      }
+      insertedText = this.constructInternalLinkText(word);
     }
     if (word.type === "frontMatter" && this.settings.insertCommaAfterFrontMatterCompletion) {
       insertedText = `${insertedText}, `;
@@ -4227,6 +4256,7 @@ var DEFAULT_SETTINGS = {
   strategy: "default",
   cedictPath: "./cedict_ts.u8",
   matchStrategy: "prefix",
+  fuzzyMatch: false,
   maxNumberOfSuggestions: 5,
   maxNumberOfWordsAsPhrase: 3,
   minNumberOfCharactersTriggered: 0,
@@ -4267,6 +4297,7 @@ var DEFAULT_SETTINGS = {
   suggestInternalLinkWithAlias: false,
   excludeInternalLinkPathPrefixPatterns: "",
   updateInternalLinksOnSave: true,
+  excludedRegExpFromDisplayedInternalLink: "",
   enableFrontMatterComplement: true,
   frontMatterComplementMatchStrategy: "inherit",
   insertCommaAfterFrontMatterCompletion: false,
@@ -4345,6 +4376,12 @@ var VariousComplementsSettingTab = class extends import_obsidian4.PluginSettingT
         cls: "various-complements__settings__warning"
       });
     }
+    new import_obsidian4.Setting(containerEl).setName("Fuzzy match").addToggle((tc) => {
+      tc.setValue(this.plugin.settings.fuzzyMatch).onChange(async (value) => {
+        this.plugin.settings.fuzzyMatch = value;
+        await this.plugin.saveSettings();
+      });
+    });
     new import_obsidian4.Setting(containerEl).setName("Max number of suggestions").addSlider(
       (sc) => sc.setLimits(1, 255, 1).setValue(this.plugin.settings.maxNumberOfSuggestions).setDynamicTooltip().onChange(async (value) => {
         this.plugin.settings.maxNumberOfSuggestions = value;
@@ -4701,6 +4738,18 @@ var VariousComplementsSettingTab = class extends import_obsidian4.PluginSettingT
             await this.plugin.saveSettings({ internalLink: true });
           }
         );
+      });
+      new import_obsidian4.Setting(containerEl).setName(
+        "An excluded regular expression pattern from the displayed internal link"
+      ).setDesc(
+        "If set '\\([^)]+\\)$', [[hoge(huga)]] will transform [[hoge(huga)|hoge]]"
+      ).addText((cb) => {
+        cb.setValue(
+          this.plugin.settings.excludedRegExpFromDisplayedInternalLink
+        ).onChange(async (value) => {
+          this.plugin.settings.excludedRegExpFromDisplayedInternalLink = value;
+          await this.plugin.saveSettings();
+        });
       });
       new import_obsidian4.Setting(containerEl).setName("Exclude prefix path patterns").setDesc("Prefix match path patterns to exclude files.").addTextArea((tac) => {
         const el = tac.setValue(
