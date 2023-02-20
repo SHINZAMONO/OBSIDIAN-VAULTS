@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "数据类型",
+      "path": "Java/入门/数据类型.md"
+    },
+    {
       "basename": "50-Inbox",
       "path": "50-Inbox/50-Inbox.md"
     },
@@ -23,10 +27,6 @@
     {
       "basename": "60-Canvas",
       "path": "60-Canvas/60-Canvas.md"
-    },
-    {
-      "basename": "数据类型",
-      "path": "Java/入门/数据类型.md"
     },
     {
       "basename": "标识符&关键字",
