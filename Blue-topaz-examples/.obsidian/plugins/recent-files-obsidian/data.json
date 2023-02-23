@@ -1,20 +1,24 @@
 {
   "recentFiles": [
     {
+      "basename": "07JavaDoc",
+      "path": "Java/00基础/07JavaDoc.md"
+    },
+    {
       "basename": "05运算符",
-      "path": "Java/入门/05运算符.md"
+      "path": "Java/00基础/05运算符.md"
     },
     {
       "basename": "04变量、常量、作用域",
-      "path": "Java/入门/04变量、常量、作用域.md"
+      "path": "Java/00基础/04变量、常量、作用域.md"
     },
     {
       "basename": "00注释",
-      "path": "Java/入门/00注释.md"
+      "path": "Java/00基础/00注释.md"
     },
     {
-      "basename": "包机制",
-      "path": "Java/入门/包机制.md"
+      "basename": "06包机制",
+      "path": "Java/00基础/06包机制.md"
     },
     {
       "basename": "60-Canvas",
@@ -26,7 +30,7 @@
     },
     {
       "basename": "03数据类型",
-      "path": "Java/入门/03数据类型.md"
+      "path": "Java/00基础/03数据类型.md"
     },
     {
       "basename": "50-Inbox",
@@ -34,7 +38,7 @@
     },
     {
       "basename": "01标识符&关键字",
-      "path": "Java/入门/01标识符&关键字.md"
+      "path": "Java/00基础/01标识符&关键字.md"
     },
     {
       "basename": "常用工具",
@@ -195,10 +199,6 @@
     {
       "basename": "列出含有指定关键词的出链",
       "path": "77-Example/◾ Dataview相关实例/列出含有指定关键词的出链.md"
-    },
-    {
-      "basename": "如何把示例库移植到你现有的库中？",
-      "path": "00-Tips/示例库移植说明/如何把示例库移植到你现有的库中？.md"
     }
   ],
   "omittedPaths": [],

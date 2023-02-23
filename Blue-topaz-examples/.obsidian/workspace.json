@@ -31,7 +31,20 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java/入门/05运算符.md",
+                "file": "Java/00基础/05运算符.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "1453f26c2e2af721",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Java/00基础/07JavaDoc.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -39,7 +52,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -113,8 +126,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 276.9945435523987,
-    "collapsed": true
+    "width": 276.9945435523987
   },
   "right": {
     "id": "4e390742ffc29613",
@@ -139,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java/入门/05运算符.md"
+                "file": "Java/00基础/07JavaDoc.md"
               }
             }
           },
@@ -170,7 +182,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java/入门/05运算符.md",
+                "file": "Java/00基础/07JavaDoc.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "byModifiedTime",
@@ -187,7 +199,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java/入门/05运算符.md",
+                "file": "Java/00基础/07JavaDoc.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -249,17 +261,17 @@
       "obsidian-memos:Memos": false
     }
   },
-  "active": "2e5de6b1a615e406",
+  "active": "37c8f55a8ef7a09c",
   "lastOpenFiles": [
-    "Java/入门/04变量、常量、作用域.md",
-    "Java/入门/05运算符.md",
-    "Java/入门/00注释.md",
-    "Java/入门/包机制.md",
+    "Java/00基础/05运算符.md",
+    "Java/00基础/04变量、常量、作用域.md",
+    "Java/00基础/00注释.md",
+    "Java/00基础/06包机制.md",
     "60-Canvas/60-Canvas.md",
     "60-Canvas/Home_middle.canvas",
     "50-Inbox/50-Inbox.md",
-    "Java/入门/03数据类型.md",
-    "Java/入门/01标识符&关键字.md",
+    "Java/00基础/03数据类型.md",
+    "Java/00基础/01标识符&关键字.md",
     "60-Canvas/未命名.canvas"
   ]
 }
