@@ -113,8 +113,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 276.9945435523987,
-    "collapsed": true
+    "width": 276.9945435523987
   },
   "right": {
     "id": "4e390742ffc29613",
@@ -249,9 +248,9 @@
       "obsidian-memos:Memos": false
     }
   },
-  "active": "2e5de6b1a615e406",
+  "active": "37c8f55a8ef7a09c",
   "lastOpenFiles": [
-    "Java/入门/运算符.md",
+    "Java/入门/05运算符.md",
     "Java/入门/00注释.md",
     "Java/入门/包机制.md",
     "Java/入门/04变量、常量、作用域.md",
