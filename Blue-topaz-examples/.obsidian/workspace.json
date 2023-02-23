@@ -113,7 +113,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 276.9945435523987
+    "width": 276.9945435523987,
+    "collapsed": true
   },
   "right": {
     "id": "4e390742ffc29613",
@@ -223,7 +224,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 265
+    "width": 265,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -247,7 +249,7 @@
       "obsidian-memos:Memos": false
     }
   },
-  "active": "37c8f55a8ef7a09c",
+  "active": "2e5de6b1a615e406",
   "lastOpenFiles": [
     "Java/入门/包机制.md",
     "60-Canvas/60-Canvas.md",
