@@ -459,6 +459,11 @@ function lowerStartsWith(a, b) {
 function lowerFuzzy(a, b) {
   return microFuzzy(a.toLowerCase(), b.toLowerCase());
 }
+function lowerFuzzyStarsWith(a, b) {
+  const aLower = a.toLowerCase();
+  const bLower = b.toLowerCase();
+  return aLower[0] !== bLower[0] ? false : microFuzzy(aLower, bLower);
+}
 function capitalizeFirstLetter(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
@@ -495,12 +500,18 @@ function findCommonPrefix(strs) {
 }
 function microFuzzy(value, query) {
   let i = 0;
+  let lastMatchIndex = null;
+  let isFuzzy = false;
   for (let j = 0; j < value.length; j++) {
     if (value[j] === query[i]) {
+      if (lastMatchIndex != null && j - lastMatchIndex > 1) {
+        isFuzzy = true;
+      }
+      lastMatchIndex = j;
       i++;
     }
     if (i === query.length) {
-      return true;
+      return isFuzzy ? "fuzzy" : true;
     }
   }
   return false;
@@ -2479,14 +2490,16 @@ function judge(word, query, queryStartWithUpper, fuzzy) {
     };
   }
   const matcher = fuzzy ? lowerFuzzy : lowerStartsWith;
-  if (matcher(word.value, query)) {
+  const matched = matcher(word.value, query);
+  if (matched) {
     if (queryStartWithUpper && word.type !== "internalLink" && word.type !== "frontMatter") {
       const c = capitalizeFirstLetter(word.value);
       return {
         word: {
           ...word,
           value: c,
-          hit: c
+          hit: c,
+          fuzzy: matched === "fuzzy"
         },
         value: c,
         alias: false
@@ -2495,21 +2508,23 @@ function judge(word, query, queryStartWithUpper, fuzzy) {
       return {
         word: {
           ...word,
-          hit: word.value
+          hit: word.value,
+          fuzzy: matched === "fuzzy"
         },
         value: word.value,
         alias: false
       };
     }
   }
-  const matchedAlias = (_a = word.aliases) == null ? void 0 : _a.find((a) => matcher(a, query));
-  if (matchedAlias) {
+  const matchedAlias = (_a = word.aliases) == null ? void 0 : _a.map((a) => ({ aliases: a, matched: matcher(a, query) })).find((x) => x.matched);
+  if (matchedAlias == null ? void 0 : matchedAlias.matched) {
     return {
       word: {
         ...word,
-        hit: matchedAlias
+        hit: matchedAlias.aliases,
+        fuzzy: matchedAlias.matched === "fuzzy"
       },
-      value: matchedAlias,
+      value: matchedAlias.aliases,
       alias: true
     };
   }
@@ -2565,6 +2580,9 @@ function suggestWords(indexedWords, query, maxNum, option = {}) {
   const candidate = filteredJudgement.sort((a, b) => {
     const aWord = a.word;
     const bWord = b.word;
+    if (a.word.fuzzy !== b.word.fuzzy) {
+      return a.word.fuzzy ? 1 : -1;
+    }
     const notSameWordType = aWord.type !== bWord.type;
     if (frontMatter && notSameWordType) {
       return bWord.type === "frontMatter" ? 1 : -1;
@@ -2601,44 +2619,63 @@ function judgeByPartialMatch(word, query, queryStartWithUpper, fuzzy) {
       alias: false
     };
   }
-  const startsWithMatcher = fuzzy ? lowerFuzzy : lowerStartsWith;
+  const startsWithMatcher = fuzzy ? lowerFuzzyStarsWith : lowerStartsWith;
   const includesMatcher = fuzzy ? lowerFuzzy : lowerIncludes;
-  if (startsWithMatcher(word.value, query)) {
+  const startsWithMatched = startsWithMatcher(word.value, query);
+  if (startsWithMatched) {
     if (queryStartWithUpper && word.type !== "internalLink" && word.type !== "frontMatter") {
       const c = capitalizeFirstLetter(word.value);
-      return { word: { ...word, value: c, hit: c }, value: c, alias: false };
+      return {
+        word: {
+          ...word,
+          value: c,
+          hit: c,
+          fuzzy: startsWithMatched === "fuzzy"
+        },
+        value: c,
+        alias: false
+      };
     } else {
       return {
-        word: { ...word, hit: word.value },
+        word: {
+          ...word,
+          hit: word.value,
+          fuzzy: startsWithMatched === "fuzzy"
+        },
         value: word.value,
         alias: false
       };
     }
   }
-  const matchedAliasStarts = (_a = word.aliases) == null ? void 0 : _a.find(
-    (a) => startsWithMatcher(a, query)
-  );
-  if (matchedAliasStarts) {
+  const startsWithAliasMatched = (_a = word.aliases) == null ? void 0 : _a.map((a) => ({ aliases: a, matched: startsWithMatcher(a, query) })).find((x) => x.matched);
+  if (startsWithAliasMatched) {
     return {
-      word: { ...word, hit: matchedAliasStarts },
-      value: matchedAliasStarts,
+      word: {
+        ...word,
+        hit: startsWithAliasMatched.aliases,
+        fuzzy: startsWithAliasMatched.matched === "fuzzy"
+      },
+      value: startsWithAliasMatched.aliases,
       alias: true
     };
   }
-  if (includesMatcher(word.value, query)) {
+  const includesMatched = includesMatcher(word.value, query);
+  if (includesMatched) {
     return {
-      word: { ...word, hit: word.value },
+      word: { ...word, hit: word.value, fuzzy: includesMatched === "fuzzy" },
       value: word.value,
       alias: false
     };
   }
-  const matchedAliasIncluded = (_b = word.aliases) == null ? void 0 : _b.find(
-    (a) => includesMatcher(a, query)
-  );
+  const matchedAliasIncluded = (_b = word.aliases) == null ? void 0 : _b.map((a) => ({ aliases: a, matched: includesMatcher(a, query) })).find((x) => x.matched);
   if (matchedAliasIncluded) {
     return {
-      word: { ...word, hit: matchedAliasIncluded },
-      value: matchedAliasIncluded,
+      word: {
+        ...word,
+        hit: matchedAliasIncluded.aliases,
+        fuzzy: matchedAliasIncluded.matched === "fuzzy"
+      },
+      value: matchedAliasIncluded.aliases,
       alias: true
     };
   }
@@ -2679,6 +2716,9 @@ function suggestWordsByPartialMatch(indexedWords, query, maxNum, option = {}) {
   const candidate = filteredJudgement.sort((a, b) => {
     const aWord = a.word;
     const bWord = b.word;
+    if (a.word.fuzzy !== b.word.fuzzy) {
+      return a.word.fuzzy ? 1 : -1;
+    }
     const notSameWordType = aWord.type !== bWord.type;
     if (frontMatter && notSameWordType) {
       return bWord.type === "frontMatter" ? 1 : -1;
@@ -4171,9 +4211,14 @@ var AutoCompleteSuggest = class extends import_obsidian3.EditorSuggest {
       );
       return this.appHelper.useWikiLinks ? `[[${link2}|${word.value}]]` : `[${word.value}](${encodeSpace(link2)}.md)`;
     }
-    const pattern = this.settings.excludedRegExpFromDisplayedInternalLink.length > 0 ? new RegExp(this.settings.excludedRegExpFromDisplayedInternalLink) : null;
+    const pattern = this.settings.insertAliasTransformedFromDisplayedInternalLink.enabled ? new RegExp(
+      this.settings.insertAliasTransformedFromDisplayedInternalLink.beforeRegExp
+    ) : null;
     const match = (value) => pattern ? Boolean(value.match(pattern)) : false;
-    const excludes = (value) => pattern ? value.replace(pattern, "") : value;
+    const replaceByPattern = (value) => pattern ? value.replace(
+      pattern,
+      this.settings.insertAliasTransformedFromDisplayedInternalLink.after
+    ) : value;
     const { displayed, link } = this.appHelper.optimizeMarkdownLinkText(
       word.phantom ? word.value : word.createdPath
     );
@@ -4181,9 +4226,9 @@ var AutoCompleteSuggest = class extends import_obsidian3.EditorSuggest {
       return this.appHelper.useWikiLinks ? `[[${link}|${word.value}]]` : `[${word.value}](${encodeSpace(link)}.md)`;
     }
     if (this.appHelper.useWikiLinks) {
-      return match(link) ? `[[${link}|${excludes(link)}]]` : `[[${link}]]`;
+      return match(link) ? `[[${link}|${replaceByPattern(link)}]]` : `[[${link}]]`;
     }
-    return match(displayed) ? `[${excludes(displayed)}](${encodeSpace(link)}.md)` : `[${displayed}](${encodeSpace(link)}.md)`;
+    return match(displayed) ? `[${replaceByPattern(displayed)}](${encodeSpace(link)}.md)` : `[${displayed}](${encodeSpace(link)}.md)`;
   }
   selectSuggestion(word, evt) {
     var _a, _b;
@@ -4256,7 +4301,7 @@ var DEFAULT_SETTINGS = {
   strategy: "default",
   cedictPath: "./cedict_ts.u8",
   matchStrategy: "prefix",
-  fuzzyMatch: false,
+  fuzzyMatch: true,
   maxNumberOfSuggestions: 5,
   maxNumberOfWordsAsPhrase: 3,
   minNumberOfCharactersTriggered: 0,
@@ -4297,7 +4342,11 @@ var DEFAULT_SETTINGS = {
   suggestInternalLinkWithAlias: false,
   excludeInternalLinkPathPrefixPatterns: "",
   updateInternalLinksOnSave: true,
-  excludedRegExpFromDisplayedInternalLink: "",
+  insertAliasTransformedFromDisplayedInternalLink: {
+    enabled: false,
+    beforeRegExp: "",
+    after: ""
+  },
   enableFrontMatterComplement: true,
   frontMatterComplementMatchStrategy: "inherit",
   insertCommaAfterFrontMatterCompletion: false,
@@ -4740,17 +4789,34 @@ var VariousComplementsSettingTab = class extends import_obsidian4.PluginSettingT
         );
       });
       new import_obsidian4.Setting(containerEl).setName(
-        "An excluded regular expression pattern from the displayed internal link"
-      ).setDesc(
-        "If set '\\([^)]+\\)$', [[hoge(huga)]] will transform [[hoge(huga)|hoge]]"
-      ).addText((cb) => {
-        cb.setValue(
-          this.plugin.settings.excludedRegExpFromDisplayedInternalLink
+        "Insert an alias that is transformed from the displayed internal link"
+      ).addToggle((tc) => {
+        tc.setValue(
+          this.plugin.settings.insertAliasTransformedFromDisplayedInternalLink.enabled
         ).onChange(async (value) => {
-          this.plugin.settings.excludedRegExpFromDisplayedInternalLink = value;
+          this.plugin.settings.insertAliasTransformedFromDisplayedInternalLink.enabled = value;
           await this.plugin.saveSettings();
+          this.display();
         });
       });
+      if (this.plugin.settings.insertAliasTransformedFromDisplayedInternalLink.enabled) {
+        new import_obsidian4.Setting(containerEl).setName("Before: regular expression pattern with captures").setDesc(String.raw`Ex: (?<name>.+) \(.+\)$`).setClass("various-complements__settings__nested").addText((cb) => {
+          cb.setValue(
+            this.plugin.settings.insertAliasTransformedFromDisplayedInternalLink.beforeRegExp
+          ).onChange(async (value) => {
+            this.plugin.settings.insertAliasTransformedFromDisplayedInternalLink.beforeRegExp = value;
+            await this.plugin.saveSettings();
+          });
+        });
+        new import_obsidian4.Setting(containerEl).setName("After").setDesc("Ex: $<name>").setClass("various-complements__settings__nested").addText((cb) => {
+          cb.setValue(
+            this.plugin.settings.insertAliasTransformedFromDisplayedInternalLink.after
+          ).onChange(async (value) => {
+            this.plugin.settings.insertAliasTransformedFromDisplayedInternalLink.after = value;
+            await this.plugin.saveSettings();
+          });
+        });
+      }
       new import_obsidian4.Setting(containerEl).setName("Exclude prefix path patterns").setDesc("Prefix match path patterns to exclude files.").addTextArea((tac) => {
         const el = tac.setValue(
           this.plugin.settings.excludeInternalLinkPathPrefixPatterns
