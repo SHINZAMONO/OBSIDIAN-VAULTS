@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "05运算符",
+      "path": "Java/00基础/05运算符.md"
+    },
+    {
+      "basename": "06包机制",
+      "path": "Java/00基础/06包机制.md"
+    },
+    {
+      "basename": "07JavaDoc",
+      "path": "Java/00基础/07JavaDoc.md"
+    },
+    {
       "basename": "99-Attachment",
       "path": "99-Attachment/99-Attachment.md"
     },
@@ -21,24 +33,12 @@
       "path": "60-Canvas/Home_middle.canvas"
     },
     {
-      "basename": "07JavaDoc",
-      "path": "Java/00基础/07JavaDoc.md"
-    },
-    {
-      "basename": "05运算符",
-      "path": "Java/00基础/05运算符.md"
-    },
-    {
       "basename": "04变量、常量、作用域",
       "path": "Java/00基础/04变量、常量、作用域.md"
     },
     {
       "basename": "00注释",
       "path": "Java/00基础/00注释.md"
-    },
-    {
-      "basename": "06包机制",
-      "path": "Java/00基础/06包机制.md"
     },
     {
       "basename": "03数据类型",
