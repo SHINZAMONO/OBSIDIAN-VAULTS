@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Home_middle",
+      "path": "60-Canvas/Home_middle.canvas"
+    },
+    {
       "basename": "05运算符",
       "path": "Java/00基础/05运算符.md"
     },
@@ -27,10 +31,6 @@
     {
       "basename": "00-Tips",
       "path": "00-Tips/00-Tips.md"
-    },
-    {
-      "basename": "Home_middle",
-      "path": "60-Canvas/Home_middle.canvas"
     },
     {
       "basename": "04变量、常量、作用域",
